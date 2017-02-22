@@ -1,0 +1,269 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.logo {
+    height: 60px;
+    width: 60px;
+    left: 250;
+    top: 250;
+    margin-top: 20px
+}
+
+.fb {
+height: 30px; 
+width: 30px; 
+left: 250; 
+top: 250;
+margin-top: 15px;
+margin-right: 25px;
+float:right;
+}
+
+.top-buttons {
+  border:0px;
+  background-color: transparent;
+  float:right;
+  margin-top: 20px;
+  margin-right: 40px
+
+}
+
+.trips {
+font-size: 46px; 
+color:#ff5757 ;
+font-weight: bold;
+margin-left: 100px;
+margin-top: 70px;
+}
+
+.books {
+font-size: 46px; 
+color:#505050 ;
+margin-left: 100px;
+}
+
+
+.location{
+margin-left: 100px;
+display: inline-block;
+font-size: 20px;
+border: 2px solid #e0e0e0 ;
+margin-top: 20px;
+float: left;
+height: 80px; 
+width: 360px; 
+margin-bottom: 100px;
+
+}
+
+input{
+border:0px;
+}
+
+.guest {
+display: inline-block;
+font-size: 20px;
+border: 2px solid #e0e0e0 ;
+height: 80px; 
+width: 360px; 
+margin-top: 20px;
+float: left;
+margin-bottom: 20px;
+}
+
+
+.smallbutton {
+height: 48px;
+}
+
+
+div button {
+border-color: transparent;
+float: right;
+margin-right: 35px;
+margin-bottom: 50px;
+background-color:#ff5757 ;
+border-radius: 5px
+}
+
+
+.home {
+font-size: 20px;
+margin-top: 40px;
+margin-left: 100px;
+margin-bottom: 15px;
+color: black;
+clear:both
+}
+
+
+.roompic {
+height: 280px; 
+width: 340px; 
+}
+.room {
+display: inline-block;
+
+}
+.pricebold {
+font-weight: bold;
+margin-left: 10
+}
+
+.room-panel {
+  height: 327px;
+  margin-left: 100px;
+}
+
+.roompic2 {
+margin-left: 20px;
+height: 280px; 
+width: 340px; 
+}
+
+.roompic3 {
+margin-left: 20px;
+height: 280px; 
+width: 340px; 
+}
+
+p {
+  color: black
+}
+
+.citypic {
+height: 270px; 
+width: 165px; 
+margin-right: 10px;
+}
+
+
+.experience {
+font-size: 20px;
+margin-left: 100px;
+margin-bottom: 15px;
+color: black;
+clear:both
+}
+
+
+.exppic
+{
+height: 270px; 
+width: 255px; 
+margin-right: 10px;
+}
+
+.maintop {
+height: 280px; 
+width: 460px; 
+font-size: 18px;
+margin-top: 100px;
+text-align: left;
+display: inline-block;
+}
+
+
+.hostingbold{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.greenbutton {
+background-color: #008489 ;
+float: left;
+border-radius: 4px;
+border-color:transparent;
+color: white;
+margin-top: 30px;
+display: inline-block;
+}
+
+
+.rooom {
+height: 311px; 
+width: 594px; 
+}
+
+.questions {
+font-size: 20px;
+margin-top: 50px;
+color: black;
+clear:both
+}
+
+
+.linediv {
+display: inline-block;
+font-family: Circular;
+margin-top: 30px;
+margin-right: 15px;
+height: 250px; 
+width: 350px;
+font-size: 17px;
+border-top: 4px solid #008489 ;
+}
+
+
+
+.firstbold{
+font-weight: bold;
+font-size: 24px;
+}
+
+.secondbold {
+font-weight: bold;
+font-size: 14px;
+}
+
+.yesno {
+ color:#008489 ; 
+}
+
+.linediv2 {
+margin-top: 50px;
+height: 250px; 
+width: 1280px;
+border-top: 1px solid #d0d0d0 ;  
+clear:both;
+margin-left: -100px;
+}
+
+.linediv3 {
+margin-top: 10px;
+height: 240px; 
+width: 1000px;
+border-bottom: 1px solid #d0d0d0 ;  
+margin-left: 100px;
+}
+
+.logo2 {
+height: 35px; 
+width: 35px; 
+}
+
+.text {
+  margin-top: 30px;
+  display: inline-block;
+  color: #848484 ;
+  margin-bottom: 100px
+}
+
+.text2 {
+  float: right;
+  margin-top: 30px;
+  margin-right: 150px;
+  display: inline-block;
+  color: #848484 ;
+  margin-bottom: 100px
+}
+
+.imglink {
+height: 20px; 
+width: 20px;
+ }
+
+a:visited {
+    color: #848484;
+    }

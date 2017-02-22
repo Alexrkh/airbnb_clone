@@ -41,6 +41,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.7.3)
       execjs
+    awesome_print (1.7.0)
     bcrypt (3.1.11)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -188,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootstrap-sass (~> 3.3.6)
   byebug
   clearance
@@ -196,6 +198,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  omniauth
   omniauth-facebook
   pg (~> 0.18)
   puma (~> 3.0)
