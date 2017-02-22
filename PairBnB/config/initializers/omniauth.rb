@@ -1,4 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :developer unless Rails.env.production?
-  provider :facebook,ENV['FACEBOOK_APP_KEY'],ENV['FACEBOOK_APP_KEY']
+  provider :facebook,ENV['FACEBOOK_APP_KEY'],ENV['FACEBOOK_APP_SECRET'],
+  info_fields:"email, first_name, last_name, gender, birthday"
 end
