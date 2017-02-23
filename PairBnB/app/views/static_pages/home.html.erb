@@ -3,6 +3,7 @@
     <a href="https/rbrberb.wrgb"><img class="logo" src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"/></a>
     <% if signed_in? %>
            <button class="top-buttons"><%= link_to "Sign out", sign_out_path, :method=>:delete %>
+           <button class="top-buttons"><%= link_to "Become a host", new_listing_path %>
          <%else%>
      <button class="top-buttons">Log in</button>
      <button class="top-buttons" data-toggle="modal" data-target="#signup">Sign up</button>
