@@ -1,2 +1,67 @@
 <h1>welcome</h1>
 
+<%= form_for (@listing) do |p| %>
+<select name="listing[property_type]">
+  <option value="Entire Place">Entire Place</option>
+  <option value="Private Room">Private Room</option>
+  <option value="Share Room">Share Room</option>
+</select>
+
+<select name="listing[guest_quantity]">
+  <option value="1">For 1 guest</option>
+  <option value="2">For 2 guests</option>
+  <option value="3">For 3 guests</option>
+  <option value="4">For 4 guests</option>
+  <option value="5">For 5 guests</option>
+  <option value="6">For 6 guests</option>
+  <option value="7">For 7 guests</option>
+  <option value="8">For 8 guests</option>
+  <option value="9">For 9 guests</option>
+  <option value="10">For 10 guests</option>
+  <option value="11">For 11 guests</option>
+  <option value="12">For 12 guests</option>
+  <option value="13">For 13 guests</option>
+  <option value="14">For 14 guests</option>
+  <option value="15">For 15 guests</option>
+  <option value="16">For 16 guests</option>
+</select>
+
+<select name="listing[own_home]">
+  <option value="Yes">Yes</option>
+  <option value="No">No</option>
+</select>
+
+
+<select name="listing[bedroom_quantity]">
+  <option value="1">For 1 bedroom</option>
+  <option value="2">For 2 bedrooms</option>
+  <option value="3">For 3 bedrooms</option>
+  <option value="4">For 4 bedrooms</option>
+  <option value="5">For 5 bedrooms</option>
+  <option value="6">For 6 bedrooms</option>
+  <option value="7">For 7 bedrooms</option>
+  <option value="8">For 8 bedrooms</option>
+  <option value="9">For 9 bedrooms</option>
+  <option value="10">For 10 bedrooms</option>
+</select>
+
+<select name="listing[bed_quantity]">
+  <option value="1">For 1 bed</option>
+  <option value="2">For 2 beds</option>
+  <option value="3">For 3 beds</option>
+  <option value="4">For 4 beds</option>
+  <option value="5">For 5 beds</option>
+  <option value="6">For 6 beds</option>
+  <option value="7">For 7 beds</option>
+  <option value="8">For 8 beds</option>
+  <option value="9">For 9 beds</option>
+  <option value="10">For 10 beds</option>
+  <option value="11">For 11 beds</option>
+  <option value="12">For 12 beds</option>
+  <option value="13">For 13 beds</option>
+  <option value="14">For 14 beds</option>
+  <option value="15">For 15 beds</option>
+  <option value="16">For 16 beds</option>
+</select>
+<%= p.submit %>
+<% end %>
