@@ -4,6 +4,7 @@
            <button class="top-buttons"><%= link_to "Sign out", sign_out_path, :method=>:delete %>
            <button class="top-buttons"><%= link_to "Become a host", new_listing_path %>
          <%else%>
+      <button class="top-buttons"><%= link_to "Reservation", reservations_path%></button>
      <button class="top-buttons">Log in</button>
      <button class="top-buttons" data-toggle="modal" data-target="#signup">Sign up</button>
      	<div class="modal fade" id="signup" role="dialog">
