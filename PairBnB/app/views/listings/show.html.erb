@@ -1,7 +1,6 @@
-<h1>welcome</h1>
+
 
 <%= @listing.property_type %><p>property_type</p></br>
-
 <%= @listing.own_home %><p>own home</p></br>
 <%= @listing.guest_quantity %><p>guest quantity</p></br>
 <%= @listing.bedroom_quantity %><p>bedroom_quantity</p></br>
@@ -16,4 +15,5 @@
 <%= @listing.amenities %><p>amenities</p></br>
 <%= @listing.spaces_can_use %><p>spaces_can_use</p></br>
 <%= @listing.price_night %><p>price_night</p></br>
+<%=image_tag(@listing.avatar_url)%>
 
