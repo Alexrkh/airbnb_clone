@@ -1,4 +1,20 @@
-<h1>welcome</h1>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header nav-fix">
+        <a href="https/rbrberb.wrgb"><img class="logo" src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg" /></a>
+      </div>
+    </div>
+  </nav>
+    <div class="container top-margin">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class="greeting">Hi, <%=current_user.first_name%>! Let’s get you ready
+          <br> to become a host.
+        </div>
+        <br>
+        <br>
+        <div class="small">STEP 1</div>
+        <div class="place">What kind of place do you have?</div>
 
 <%= form_for (@listing) do |p| %>
 <select name="listing[property_type]">
@@ -25,13 +41,14 @@
   <option value="15">For 15 guests</option>
   <option value="16">For 16 guests</option>
 </select>
-
+<div class="guestions">Is this your personal home?</div>
 <select name="listing[own_home]">
   <option value="Yes">Yes</option>
   <option value="No">No</option>
 </select>
-
-
+<div class="guestions">Guests like to know if this is a place you live and keep your personal belongings in.</div> 
+<hr>
+<div class="guestions">How many bedrooms can guests use?</div>
 <select name="listing[bedroom_quantity]">
   <option value="1">For 1 bedroom</option>
   <option value="2">For 2 bedrooms</option>
@@ -44,7 +61,7 @@
   <option value="9">For 9 bedrooms</option>
   <option value="10">For 10 bedrooms</option>
 </select>
-
+<div class="guestions">How many beds can guests use?</div>
 <select name="listing[bed_quantity]">
   <option value="1">For 1 bed</option>
   <option value="2">For 2 beds</option>
@@ -63,7 +80,8 @@
   <option value="15">For 15 beds</option>
   <option value="16">For 16 beds</option>
 </select>
-
+<br>
+<div class="guestions">What amenities do you offer?</div>
 <select name="listing[amenities]">
   <option value="1">Essentials</option>
   <option value="2">Wifi</option>
@@ -81,7 +99,8 @@
   <option value="14">Private entrance</option>
 </select>
 
-
+<br>
+<div  class="guestions">What spaces can guests use</div>
 
 <select name="listing[spaces_can_use]">
   <option value="1">Private living room</option>
@@ -95,8 +114,12 @@
   <option value="9">Gym</option>
 </select>
 
-
-
+<br>
+<br>
+<hr>
+<div class="guestions">Where's your place located?</div>
+<%= p.label :country %>:
+<%= p.text_field :country %><br/>
 
 <%= p.label :property_name %>:
 <%= p.text_field :property_name %><br/>
@@ -113,11 +136,92 @@
 <%= p.label :zip_code %>:
 <%= p.text_field :zip_code %><br/>
 
-<%= p.label :country %>:
-<%= p.text_field :country %><br/>
+<div class="guestions">How much you want to rent your unit?</div>
 
 <%= p.label :price_night %>:
-<%= p.text_field :price_night %><br/>
+<%= p.text_field :price_night %><br/></br>
 
-<%= p.submit %>
+<center><%= p.submit %></center>
 <% end %>
+        <div>
+          
+        </div>
+
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><img src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=145911970" /></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-10 col-sm-8 col-xs-6 linediv2">
+        <div class="linediv3">
+          <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1 links">
+              <select>
+                <option value="English">English</option>
+                <option value="Espanol">Espanol</option>
+                <option value="Deutsch">Deutsch</option>
+              </select>
+              <br>
+              <select class="curency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1 links">
+              <span>Airbnb</span>
+              <br>
+              <br>
+              <a href="">About</a>
+              <br>
+              <a href="">Careers</a>
+              <br>
+              <a href="">Press</a>
+              <br>
+              <a href="">Policies</a>
+              <br>
+              <a href="">Help</a>
+              <br>
+              <a href="">Diversity & Belonging</a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1 links">
+              <span>Discover</span>
+              <br>
+              <br>
+              <a href="">Trust & Safety</a>
+              <br>
+              <a href="">Travel Credit</a>
+              <br>
+              <a href="">Gift Cards</a>
+              <br>
+              <a href="">Airbnb Citizen</a>
+              <br>
+              <a href="">Business Travel</a>
+              <br>
+              <a href="">Guidebooks</a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1 links">
+              <span>Hosting</span>
+              <br>
+              <br>
+              <a href="">Why Host</a>
+              <br>
+              <a href="">Hospitality</a>
+              <br>
+              <a href="">Responsible Hosting</a>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div style="padding-top: 320px; padding-left: 50px;">
+          <img class="logo2" src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"> © Airbnb, Inc.
+          <div style="float: right; padding-right:70px">
+            <span>Terms & Privacy</span>
+            <span>Site Map</span>
+            <span><img class="imglink" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSItDufNGjAlsx2Kf4awCyuBFHtWUyObUA6YGEZB1mEP08vUHix"/></span>
+            <span><img class="imglink" src="http://www.welltodolondon.com/wp-content/uploads/2015/11/twitter-4-xxl1.png"/></span>
+            <span><img class="imglink" src="https://image.freepik.com/free-icon/instagram-social-network-logo-of-photo-camera_318-64651.jpg"/></span>
+          </div>
+        </div>
+      </div>
