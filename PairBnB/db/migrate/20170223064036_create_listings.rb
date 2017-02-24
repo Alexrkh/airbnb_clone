@@ -6,7 +6,7 @@ class CreateListings < ActiveRecord::Migration[5.0]
     	t.string :own_home
     	t.string :guest_quantity
     	t.string :bedroom_quantity
-    	t.string :bedroom_quantity
+    	t.string :bed_quantity
     	t.string :bathroom_quantity
     	t.string :country
     	t.string :street_name
