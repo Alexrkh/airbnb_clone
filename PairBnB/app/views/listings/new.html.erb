@@ -139,9 +139,16 @@
 <div class="guestions">How much you want to rent your unit?</div>
 
 <%= p.label :price_night %>:
-<%= p.text_field :price_night %><br/></br>
+<%= p.text_field :price_night %><br/>
 
-<center><%= p.submit %></center>
+  <p>
+    <h1><label>My Avatar</label></h1>
+    <%= image_tag(@listing.avatar_url) if @listing.avatar? %>
+    <%= p.file_field :avatar %>
+    <%= p.hidden_field :avatar_cache %>
+  </p>
+
+<h2><%= p.submit %></h2>
 <% end %>
         <div>
           
