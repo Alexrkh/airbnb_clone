@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170223132640) do
     t.string   "zip_code"
     t.string   "amenities"
     t.string   "spaces_can_use"
+    t.integer  "price_night"
     t.integer  "user_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
