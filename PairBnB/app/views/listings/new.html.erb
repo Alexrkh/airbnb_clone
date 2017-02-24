@@ -45,6 +45,38 @@
   <option value="10">For 10 bedrooms</option>
 </select>
 
+<select name="listing[amenities]">
+  <option value="1">Essentials</option>
+  <option value="2">Wifi</option>
+  <option value="3">Shampoo</option>
+  <option value="4">Closet/drawer</option>
+  <option value="5">TV</option>
+  <option value="6">Heat</option>
+  <option value="7">Air conditioning</option>
+  <option value="8">Breakfast, coffee, tea</option>
+  <option value="9">Desk/workspace</option>
+  <option value="10">Fireplace</option>
+  <option value="11">Iron</option>
+  <option value="12">Hair dryer</option>
+  <option value="13">Pets in the house</option>
+  <option value="14">Private entrance</option>
+</select>
+
+
+
+<select name="listing[spaces_can_use]">
+  <option value="1">Private living room</option>
+  <option value="2">Kitchen</option>
+  <option value="3">Laundry - washer</option>
+  <option value="4">Laundry - dryer</option>
+  <option value="5">Parking</option>
+  <option value="6">Elevator</option>
+  <option value="7">Pool</option>
+  <option value="8">Hot tub</option>
+  <option value="9">Gym</option>
+</select>
+
+
 <select name="listing[bed_quantity]">
   <option value="1">For 1 bed</option>
   <option value="2">For 2 beds</option>
@@ -63,5 +95,43 @@
   <option value="15">For 15 beds</option>
   <option value="16">For 16 beds</option>
 </select>
+
+<%= p.label :property_name %>:
+<%= p.text_field :property_name %><br/>
+
+<%= p.label :street_name %>:
+<%= p.text_field :street_name %><br/>
+
+<%= p.label :city %>:
+<%= p.text_field :city %><br/>
+
+<%= p.label :state %>:
+<%= p.text_field :state %><br/>
+
+<%= p.label :property_name %>:
+<%= p.text_field :property_name %><br/>
+
+<%= p.label :street_name %>:
+<%= p.text_field :street_name %><br/>
+
+<%= p.label :city %>:
+<%= p.text_field :city %><br/>
+
+<%= p.label :state %>:
+<%= p.text_field :state %><br/>
+
+<%= p.label :zip_code %>:
+<%= p.text_field :zip_code %><br/>
+
+<%= p.label :country %>:
+<%= p.text_field :country %><br/>
+
+<%= p.label :price_night %>:
+<%= p.text_field :price_night %><br/>
+
+
+
+
+
 <%= p.submit %>
 <% end %>

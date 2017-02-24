@@ -12,10 +12,11 @@ class CreateListings < ActiveRecord::Migration[5.0]
     	t.string :street_name
     	t.string :property_name
     	t.string :city
-    	t.string :state 
+    	t.string :state
     	t.string :zip_code
     	t.string :amenities
     	t.string :spaces_can_use
+      t.integer :price_night
     	t.references :user
 
       t.timestamps
