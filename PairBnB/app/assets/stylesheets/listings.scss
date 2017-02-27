@@ -23,6 +23,7 @@ logo {
   .small {
     color: #d0d0d0;
     font-size: 23px;
+
   }
   
   .place {
@@ -74,6 +75,18 @@ logo {
     margin-left: 50px;
   }
   
+  .room {
+    display: inline-block;
+  }
+
+  .room-panel {
+    height: 327px;
+    margin-left: 100px;
+  }
+  
+
+
+
   .logo2 {
 
     height: 35px;
@@ -124,6 +137,3 @@ logo {
     margin-bottom: 10px;
   }
 
-  hr {
-    margin-bottom: 200px
-  }

@@ -1,19 +1,108 @@
 
 
-<%= @listing.property_type %><p>property_type</p></br>
-<%= @listing.own_home %><p>own home</p></br>
-<%= @listing.guest_quantity %><p>guest quantity</p></br>
-<%= @listing.bedroom_quantity %><p>bedroom_quantity</p></br>
-<%= @listing.bed_quantity %><p>bed_quantity</p></br>
-<%= @listing.bathroom_quantity %><p>bathroom_quantity</p></br>
-<%= @listing.country %><p>counrty</p></br>
-<%= @listing.street_name %><p>street_name</p></br>
-<%= @listing.property_name %><p>property_name</p></br>
-<%= @listing.city %><p>city</p></br>
-<%= @listing.state %><p>state</p></br>
-<%= @listing.zip_code %><p>zip_code</p></br>
-<%= @listing.amenities %><p>amenities</p></br>
-<%= @listing.spaces_can_use %><p>spaces_can_use</p></br>
-<%= @listing.price_night %><p>price_night</p></br>
-<%=image_tag(@listing.avatar_url)%>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header nav-fix">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+          <a href=""><img class="logo" src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg" /></a>
+        </div>
 
+        
+         <ul class="nav navbar-nav" style="float:right;">
+        <li class="active"><a href="#">Log in</a></li>
+      	 <li><a href="#">Sign up</a></li>
+      	 <li><a href="#">Help</a></li>
+      	 <li><a href="#">Become a host</a></li> 
+ </ul>
+  </div>
+</nav>
+
+	<div class="crop-height img-container" style="height: 1104px;"><%=image_tag(@listing.avatar_url, class: "img responsive")%></div>
+
+
+   <div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+					<button id="buttonview">View Photos</button></div></div>
+
+
+							 <div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+      <button type="button" class="btns-block">Overview</button>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+      <button type="button" class="btns-block">Reviews</button>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+      <button type="button" class="btns-block">The host</button>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+      <button type="button" class="btns-block">Location</button>
+    </div></div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <hr>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        <a href=""><img id="faceicon" src="https://a0.muscache.com/im/pictures/f2f8e78e-6015-434e-bc7e-19e0ed30b753.jpg?aki_policy=profile_x_medium" /></a>
+        <div style="margin-left:20px"><%=current_user.first_name%></div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Cozy TreeHouse in Monte Verde - MG (Brazil)
+Monte Verde, Minas Gerais, Brazil 33</div>
+      </div>
+      <div class="row">
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+					<div class="col-lg-9 col-md-9 col-sm-5 col-xs-4">
+						<h4>Please key in the date where your property is not available for renting as by default we will make it availabe for all year round. Anyway you can update the date in the profile page , listing menu if you need to make changes later. Cheers!</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+<div class="row allprop">
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+	<div class="col-md-5 yellowblock">
+		<p>Condo/Apartment/Area Name : <%= @listing.property_name %></p>
+		<p>Property type : <%= @listing.property_type %></p>
+		<p>Property ownership: <%= @listing.own_home %></p>
+		<p>Guest quantity allow :<%= @listing.guest_quantity %></p>
+        <p>Bedroom Quantity :<%= @listing.bedroom_quantity %></p>
+		<p>Bed quantity : <%= @listing.bed_quantity %></p></div>
+   			<div class="col-md-5 pinkblock">
+   				<p>Country : <%= @listing.country %></p>
+   				<p>Street name : <%= @listing.street_name %></p>
+        		<p>City : <%= @listing.city %></p>
+				<p>State : <%= @listing.state %></p>
+				<p>Zip code : <%= @listing.zip_code %></p>
+				<p>Amenities<%= @listing.amenities %></p>
+				<p>Spaces can guest use : <%= @listing.spaces_can_use %></p>
+				<p>Price per night : <%= @listing.price_night %></p></div>
+</div>
+<div class="row">
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+	<div class="col-md-4">
+		<h3>Date not available</h3>
+	 	<p>From: <input type = "text" id = "datepicker-11"></p>
+   		<br/><br/>
+		<p>To: <input type = "text" id = "datepicker-11"></p>
+		<br/>
+   	</div>
+ </div>
+ <div class="row">
+<div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"></div>
+<div class="col-lg-4 col-md-3 col-sm-3 col-xs-2">
+<ul class="pagination">
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+</ul>
+<div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"></div></div>

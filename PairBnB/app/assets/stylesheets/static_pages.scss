@@ -3,12 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .logo {
-    height: 60px;
+    height: 100%;
     width: 60px;
-    left: 250;
-    top: 250;
-    margin-top: 20px
+    
 }
+
+  .margins {
+      width: 80%;
+      margin: auto;
+    }
 
 .fb {
 height: 30px; 
@@ -20,6 +23,10 @@ margin-right: 25px;
 float:right;
 }
 
+ .textsize {
+      font-size: 15px
+    }
+
 .top-buttons {
   border:0px;
   background-color: transparent;
@@ -29,12 +36,75 @@ float:right;
 
 }
 
+ .btn-block {
+      border: 0px;
+      background-color: transparent;
+      margin-top: 10%;
+      margin-bottom: 20%;
+      font-size: 100%;
+      padding: 0px
+    }
+    
+    .nav-fix {
+      width: 100%;
+      height: 60px;
+      background-color: white;
+    }
+    
+    #buttonview {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: -80px;
+      border-color: transparent;
+      height: 49px;
+       width: 119px;
+      background-color: white;
+      
+    }
+    
+    hr {
+      height: 65px;
+    }
+
+    .btns-block {
+      border: 0px;
+      background-color: white;
+      margin-top: 30px;
+      font-size: 17px;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 100px
+    }
+
+    #faceicon {
+      height: 87px;
+      border-radius: 50%
+
+}
+
+.allprop {
+  margin-top: 30px
+}
+
+
 .trips {
 font-size: 46px; 
 color:#ff5757 ;
 font-weight: bold;
 margin-left: 100px;
 margin-top: 70px;
+}
+
+.crop-height {
+  max-height: 520px;
+  overflow: hidden;
+}
+
+.img-container {
+  width: 1500px;
+  -moz-background-size:100%;
+  -webkit-background-size:100%;
+
 }
 
 .books {
@@ -264,6 +334,11 @@ height: 20px;
 width: 20px;
  }
 
+
 a:visited {
     color: #848484;
-    }
+  }
+
+  .pagination{
+    position: absolute; 
+  }
