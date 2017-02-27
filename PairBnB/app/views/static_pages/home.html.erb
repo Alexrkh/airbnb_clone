@@ -49,26 +49,17 @@
             <a href=""><span><img class="smallbutton" src="https://i.imgsafe.org/a90f420ea7.png"/></span></a>
             <button style="color: white">Search</button>
     </div>
+
+    <% @listings.each do |listing| %>
 <div class="home">Homes</div>
 <div class ="room-panel">
       <div  class="room">
-      <a href=""><img class="roompic" src="https://a0.muscache.com/im/pictures/94934973/b26f9720_original.jpg?aki_policy=xx_large"/></a>
+     <%=image_tag(listing.avatar_url, class: "img responsive") if listing.avatar?%>
          <a href=""><p>
-          <span class="pricebold">$37 Double room in Victorian house </span><br>
-          Private room · 1 bed</p></a>
+          <span class="pricebold">RM <%=listing.price_night%>  <%=listing.property_type%> in <%=listing.country%><%=listing.state%> </span><br>
+          <%=listing.bedroom_quantity%>bedroom · <%=listing.bed_quantity%> bed</p></a>
       </div>
-      <div class="room">
-      <a href=""><img class="roompic2" src="https://a0.muscache.com/im/pictures/7787384/03380852_original.jpg?aki_policy=xx_large"/></a>
-         <a href="/jhg"><p class="roompic2">
-          <span class="pricebold">$201 Entire home/apt </span><br>
-          Private home · 6 beds</p></a>
-      </div>
-      <div class="room">
-      <a href=""><img class="roompic3" src="https://a0.muscache.com/im/pictures/16938962/5b8df046_original.jpg?aki_policy=xx_large"/></a>
-        <a href=""><p class="roompic3">
-          <span class="pricebold">$230 Entire home/apt</span><br>
-          Private home 7 beds</p></a>
-      </div>
+     <% end %>
 </div>
 <div class="home">Featured destinations</div>
 <div class ="room-panel">
