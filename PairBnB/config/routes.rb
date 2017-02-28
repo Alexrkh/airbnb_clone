@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
   root "static_pages#home"
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
