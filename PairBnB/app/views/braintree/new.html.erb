@@ -3,7 +3,7 @@
 
     <div class="demo-frame">  
 
-      <%= form_for :checkout_form, html: { id: "cardForm"} do |form| %>
+      <%= form_for :checkout_form, url: braintree_checkout_path, html: { id: "cardForm"} do |form| %>
 
         <%= form.label :card_number, "Credit Card Number", html: {class: "hosted-fields--label"} %>
         <div id="card-number" class="hosted-field"></div>
@@ -17,7 +17,7 @@
         <%= form.hidden_field "payment_method_nonce" %>
 
         <div class="button-container">
-          <%= form.submit "Purchase", disabled: true, class: "btn btn-primary", id: "submit-payment-btn" %>
+          <%= form.submit "Purchase", class: "btn btn-primary", id: "submit-payment-btn" %>
         </div>
       <% end %>
     </div>
@@ -29,11 +29,11 @@
 <script src="https://js.braintreegateway.com/web/3.6.3/js/hosted-fields.min.js"></script>
 
 <script>
-    var form = document.querySelector('#cardform');
+    var form = document.querySelector('#cardForm');
 var submit = document.querySelector("#submit-payment-btn");
 
 braintree.client.create({
-  authorization: '<%= @client_token %>
+  authorization: '<%= @client_token %>'
 }, function (err, clientInstance) {
   if (err) {
     console.error(err);
@@ -144,6 +144,7 @@ braintree.client.create({
 
         // This is where you would submit payload.nonce to your server
         document.querySelector('input[name="checkout_form[payment_method_nonce]"]').value = payload.nonce;
+        form.submit();
       });
     }, false);
   });

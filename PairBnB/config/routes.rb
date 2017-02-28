@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'braintree/new'
-
-  get 'welcome/index'
 
   root "static_pages#home"
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
@@ -13,7 +10,7 @@ Rails.application.routes.draw do
       only: [:create, :edit, :update]
   end
   
-  resources :braintree
+  resources :braintree, only: [:new]
   post 'braintree/checkout' => 'braintree#checkout'
   
   resources :listings
