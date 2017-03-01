@@ -1,8 +1,9 @@
 
-    <a href="https/rbrberb.wrgb"><img class="logo" src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"/></a>
+
+<a href="https/rbrberb.wrgb"><img class="logo" src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"/></a>
     <% if signed_in? %>
-           <button class="top-buttons"><%= link_to "Sign out", sign_out_path, :method=>:delete %>
-           <button class="top-buttons"><%= link_to "Become a host", new_listing_path %>
+           <button class="top-buttons"><%= link_to "Sign out", sign_out_path, :method=>:delete %></button>
+           <button class="top-buttons"><%= link_to "Become a host", new_listing_path %></button>
          <%else%>
       <button class="top-buttons"><%= link_to "Reservation", reservations_path%></button>
      <button class="top-buttons">Log in</button>
@@ -29,7 +30,7 @@
                              <button class="top-buttons">Help</button>
            <button class="top-buttons">Become a host</button>
          <% end %>
-
+<div class = "container">
      <div class="trips">Unforgettable trips start with Airbnb.</div>
     <div class="books">Book places to stay and things to do <br> around the world.</div>
     <div class="location">&nbsp;&nbsp;Where<br>
@@ -50,17 +51,22 @@
             <button style="color: white">Search</button>
     </div>
 
-    <% @listings.each do |listing| %>
+  
 <div class="home">Homes</div>
-<div class ="room-panel">
-      <div  class="room">
-     <%=image_tag(listing.avatar_url, class: "img responsive") if listing.avatar?%>
-         <a href=""><p>
+  <div class = "room-panel">
+    <% @listings.each do |listing| %>
+    <div class = room-card>
+      <div  class="roompic">
+        <%=image_tag(listing.avatar.medium.url) if listing.avatar?%></div>
+          <span>
           <span class="pricebold">RM <%=listing.price_night%>  <%=listing.property_type%> in <%=listing.country%><%=listing.state%> </span><br>
-          <%=listing.bedroom_quantity%>bedroom · <%=listing.bed_quantity%> bed</p></a>
-      </div>
+          <%=listing.bedroom_quantity%>bedroom · <%=listing.bed_quantity%> bed</span>
+    </div>
      <% end %>
 </div>
+
+
+
 <div class="home">Featured destinations</div>
 <div class ="room-panel">
   <div  class="room">
@@ -176,4 +182,5 @@
 <a href=""><img class="imglink" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSItDufNGjAlsx2Kf4awCyuBFHtWUyObUA6YGEZB1mEP08vUHix"/></a>
 <a href=""><img class="imglink" src="http://www.welltodolondon.com/wp-content/uploads/2015/11/twitter-4-xxl1.png"/></a>
 <a href=""><img class="imglink" src="https://image.freepik.com/free-icon/instagram-social-network-logo-of-photo-camera_318-64651.jpg"/></a>
+</div>
 </div>
