@@ -1,5 +1,19 @@
 class ListingsController < ApplicationController
 
+
+def index
+  @lists = Listing.all
+  if params[:search]
+    @lists = Listing.search(params[:search]).order("created_at DESC")
+    # redirect_to 'reservations#index'
+    render 'reservations/index'
+  else
+    @lists = Listing.all.order('created_at DESC')
+    redirect_to 'reservations#index'
+  end
+end
+
+
 	def create
     @user = User.all
 		@listing = Listing.new(listing_params)

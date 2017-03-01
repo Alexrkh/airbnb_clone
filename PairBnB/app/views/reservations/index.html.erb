@@ -1,5 +1,13 @@
+
+<% if @lists.present? %>
+  	<%=  @lists.each do|list| %>
+  	<%= list %>
+  	<% end %>
+<% else %>
+  	<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+	
+
 <h1>Complete your reservation by making the payment below</h1>
 <p>Please check all the information is correct before make payment. Thank you</p>
 <%= link_to "Make Payment", new_braintree_path %>
-<%= form_for :checkout_form, url: braintree_checkout_path, html: { id: "cardForm"} do |form| %>
-	<% end %>

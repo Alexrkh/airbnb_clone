@@ -33,108 +33,51 @@
 <div class = "container">
      <div class="trips">Unforgettable trips start with Airbnb.</div>
     <div class="books">Book places to stay and things to do <br> around the world.</div>
-    <div class="location">&nbsp;&nbsp;Where<br>
-            <input type="text"
-            maxlength="120" size="33" placeholder="&nbsp;&nbsp;Destination, sity, address">
     </div>
-    <div class="guest">&nbsp;&nbsp;When<br>
-            <input type="text"
-            maxlength="120" size="16" placeholder="&nbsp;&nbsp;Check in">
-            <input type="text" name="location"
-            maxlength="120" size="16" placeholder="-> Check out">
 
+    <div class="container2">
+    <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+    <div class="location col-md-4">&nbsp;&nbsp;Where<br>
+    <div class="row">
+            <%= text_field_tag :search, params[:search], placeholder: "Destination, city, address" %>
     </div>
-     <div class="guest">&nbsp;&nbsp;Guests<br>
+    </div>
+
+    <div class="guest col-md-4">&nbsp;&nbsp;When<br>
+    <div class="row">
+            <input type="text"
+            maxlength="50" size="10" placeholder="&nbsp;&nbsp;Check in">
+            <input type="text" name="location"
+            maxlength="50" size="10" placeholder="-> Check out">
+    </div>
+    </div>
+
+     <div class="guest col-md-4">&nbsp;&nbsp;Guests<br>
+     <div class="row">
             <span><input type="text"
             maxlength="10" size="8" value="&nbsp;&nbsp;1 guest"></span>
             <a href=""><span><img class="smallbutton" src="https://i.imgsafe.org/a90f420ea7.png"/></span></a>
-            <button style="color: white">Search</button>
+            <%= submit_tag "Search" %>
+            <% end %>
     </div>
-
+    </div></div>
   
 <div class="home">Homes</div>
   <div class = "room-panel">
     <% @listings.each do |listing| %>
     <div class = room-card>
-      <div  class="roompic">
-        <%=image_tag(listing.avatar.medium.url) if listing.avatar?%></div>
-          <span>
+      <div  class="roompic col-md-4">
+        <%= listing.id %>
+        <%=image_tag(listing.avatar.medium.url) if listing.avatar?%>
           <span class="pricebold">RM <%=listing.price_night%>  <%=listing.property_type%> in <%=listing.country%><%=listing.state%> </span><br>
           <%=listing.bedroom_quantity%>bedroom · <%=listing.bed_quantity%> bed</span>
+          </div>
     </div>
      <% end %>
 </div>
 
 
 
-<div class="home">Featured destinations</div>
-<div class ="room-panel">
-  <div  class="room">
-      <a href=""><img class="citypic" src="https://a0.muscache.com/ac/pictures/ebbb24af-52d6-490c-89e9-16cc560140e8.jpg?/"></a>
-         <a href=""><p>
-      <span class="pricebold">London</span>
-  </div>
-  <div  class="room">
-      <a href=""><img class="citypic" src="https://a0.muscache.com/ac/pictures/0c79a1b5-333a-421b-b9e3-effb8b9b9958.jpg?/"></a>
-         <a href=""><p>
-      <span class="pricebold">Seul</span></p></a>
-  </div>
-  <div  class="room">
-      <a href=""><img class="citypic" src="https://a0.muscache.com/ac/pictures/1d8ecdb4-da01-4d35-9c9e-2ef6ca604eca.jpg?/"></a>
-         <a href=""><p>
-      <span class="pricebold">Tokyo</span></p></a>
-  </div>
-  <div  class="room">
-      <a href=""><img class="citypic" src="https://a0.muscache.com/ac/pictures/d915ce17-d822-426d-b549-0c7b641fec56.jpg?/"></a>
-         <a href=""><p>
-      <span class="pricebold">Paris</span></p></a>
-  </div>
-  <div  class="room">
-      <a href=""><img class="citypic" src="https://a0.muscache.com/ac/pictures/be1dee1c-2ce7-4efb-aca8-26d47a59514b.jpg?/"></a>
-         <a href=""><p>
-      <span class="pricebold">Florence</span></p></a>
-  </div>
-  <div  class="room">
-      <a href=""><img class="citypic" src="https://a0.muscache.com/ac/pictures/7bff51c1-3c35-47a5-a86c-5ea75ab6be6c.jpg?/"></a>
-         <a href=""><p>
-      <span class="pricebold">Los Angeles</span></p></a>
-  </div>
-</div>
-<div class="experience">Most popular experiences</div>
-<div class ="room-panel">
-  <div  class="room">
-      <a href=""><img class="exppic" src="https://a0.muscache.com/im/pictures/f26e3064-fc1f-46e5-a06c-2d9325bccf5c.jpg?/"></a>
-         <a href=""><p>
-      <span class="pricebold">$60</span><br>
-          2 hours · food market & tastings</p></a>
-  </div>
-
-     <div  class="room">
-      <a href=""><img class="exppic" src="https://a0.muscache.com/im/pictures/47ab2c6d-ea01-499c-8670-f6844340d57b.jpg?></a>
-         <a href=""><p>
-      <span class="pricebold">$105</span><br>
-          3 days · live jazz & salsa</p></a>
-  </div>
-  <div  class="room">
-      <a href=""><img class="exppic" src="https://a0.muscache.com/im/pictures/ebeb7b46-f695-44d0-a20c-ffc5beb26e32.jpg?></a>
-         <a href=""><p>
-      <span class="pricebold">$47</span><br>
-          3 hours · cycling & neighborhood</p></a>
-  </div>
-  <div  class="room">
-  <div class = "col-md-4"
-      <a href=""><img class="exppic" src="https://a0.muscache.com/im/pictures/2876d4e6-3782-418b-a942-04bf0f10e18f.jpg?></a>
-         <a href=""><p>
-      <span class="pricebold">$83</span><br>
-          3 days · biking & neighborhood</p></a>
-  </div>
-   <div class="maintop">
-  <div><span class=hostingbold>
-  Hosting opens up a world of opportunity</span><br>
-  Earn money sharing your extra space with <br>travelers.</div>
-  <button class="greenbutton">See What You Can Earn</button></div>
-  <div class="room">
-  <img class="rooom" src="https://a0.muscache.com/im/pictures/6577effa-6d50-4abf-b0b6-bee8c6f9d902.jpg?aki_policy=promo_hero"/></div>
 
     <div class="questions">Frequently asked questions</div>
 
