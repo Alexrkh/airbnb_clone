@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-	default from: 'support@waifu.club'
+	default from: 'iamsuperbot123@gmail.com'
 
 	def welcome_email(user)
 		@user = user

@@ -53,13 +53,13 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
 
- config.action_mailer.delivery_method = :smtp
- config.action_mailer.smtp_settings = {
-  address:              'smtp.cock.li',
-  port:                 587,
-  domain:               'cock.li',
-  user_name:            'support@waifu.club',
-  password:             '12345678b',
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+  config.action_mailer.delivery_method = :smtp
+   config.action_mailer.smtp_settings = {
+   address:              'smtp.gmail.com',
+   port:                 465,
+   domain:               'gmail.com',
+   user_name:            'iamsuperbot123',
+   password:             'iambot123',
+   authentication:       'plain',
+   enable_starttls_auto: true  }
 end
