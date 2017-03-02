@@ -4,7 +4,7 @@ class ListingsController < ApplicationController
 def index
   @lists = Listing.all
   if params[:search]
-    @lists = Listing.search(params[:search]).order("created_at DESC")
+    @lists = Listing.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page =>1)
     # redirect_to 'reservations#index'
     render 'reservations/index'
   else

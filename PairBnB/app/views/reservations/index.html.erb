@@ -56,20 +56,18 @@
         <a href=""><img id="faceicon" src="https://a0.muscache.com/im/pictures/f2f8e78e-6015-434e-bc7e-19e0ed30b753.jpg?aki_policy=profile_x_medium" /></a>
         <div style="margin-left:20px"><%=current_user.first_name%></div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Cozy TreeHouse in Monte Verde - MG (Brazil)
-Monte Verde, Minas Gerais, Brazil 33</div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><%=current_user.email%>,<%=current_user.gender%></div>
       </div>
       <div class="row">
 					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 					<div class="col-lg-9 col-md-9 col-sm-5 col-xs-4">
-						<h4>Please key in the date where your property is not available for renting as by default we will make it availabe for all year round. Anyway you can update the date in the profile page , listing menu if you need to make changes later. Cheers!</h4>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h1>Complete your reservation by making the payment below</h1>
+		<center><h2>Complete your reservation by making the payment below</h2>
 <p>Please check all the information is correct before make payment. Thank you</p>
-<%= link_to "Make Payment", new_braintree_path %>
+<h2><%= link_to "Make Payment", new_braintree_path %></h2></center>
 <div class="row allprop">
 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 	<div class="col-md-5 yellowblock">
@@ -104,16 +102,9 @@ Monte Verde, Minas Gerais, Brazil 33</div>
 		<br/>
    	</div>
  </div>
- <div class="row">
-<div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"></div>
-<div class="col-lg-4 col-md-3 col-sm-3 col-xs-2">
-<ul class="pagination">
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-</ul>
-<div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"></div></div>
-
+ <center>
+<% if @lists != nil %>
+<%= will_paginate @lists%>
+<%end%>
+</center>
 
