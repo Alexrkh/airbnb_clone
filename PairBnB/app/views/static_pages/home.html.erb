@@ -39,29 +39,28 @@
     <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
     <div class="location col-md-4">&nbsp;&nbsp;Where<br>
     <div class="row">
-            <%= text_field_tag :search, params[:search], placeholder: "Destination, city, address" %>
+            <%= text_field_tag :search, params[:search], class: "phmargin", size: "23", placeholder: "Destination, city, address" %>
     </div>
     </div>
 
     <div class="guest col-md-4">&nbsp;&nbsp;When<br>
     <div class="row">
-            <input type="text"
-            maxlength="50" size="10" placeholder="&nbsp;&nbsp;Check in">
+            <input class="phmargin" type="text"
+            maxlength="50" size="15" placeholder="&nbsp;&nbsp;Check in">
             <input type="text" name="location"
-            maxlength="50" size="10" placeholder="-> Check out">
+            maxlength="50" size="15" placeholder="-> Check out">
     </div>
     </div>
 
      <div class="guest col-md-4">&nbsp;&nbsp;Guests<br>
      <div class="row">
             <span><input type="text"
-            maxlength="10" size="8" value="&nbsp;&nbsp;1 guest"></span>
+            maxlength="10" size="8" value="&nbsp;&nbsp;&nbsp;&nbsp;1 guest"></span>
             <a href=""><span><img class="smallbutton" src="https://i.imgsafe.org/a90f420ea7.png"/></span></a>
             <%= submit_tag "Search" %>
             <% end %>
     </div>
     </div></div>
-  
 <div class="home">Homes</div>
   <div class = "room-panel">
     <% @listings.each do |listing| %>
@@ -78,7 +77,7 @@
 
 
 
-
+<div class="alldiv">
     <div class="questions">Frequently asked questions</div>
 
   <div  class="linediv"><span class="firstbold">
@@ -115,6 +114,7 @@
  <a href=""><span class="yesno">Yes</span></a> or
  <a href=""><span class="yesno">No</span></a></span></div>
  <div class="linediv2">
+
  <div class="linediv3">
  </div>
  </div>
@@ -125,5 +125,6 @@
 <a href=""><img class="imglink" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSItDufNGjAlsx2Kf4awCyuBFHtWUyObUA6YGEZB1mEP08vUHix"/></a>
 <a href=""><img class="imglink" src="http://www.welltodolondon.com/wp-content/uploads/2015/11/twitter-4-xxl1.png"/></a>
 <a href=""><img class="imglink" src="https://image.freepik.com/free-icon/instagram-social-network-logo-of-photo-camera_318-64651.jpg"/></a>
+</div>
 </div>
 </div>
