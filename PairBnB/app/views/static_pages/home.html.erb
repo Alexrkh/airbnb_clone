@@ -5,8 +5,8 @@
            <button class="top-buttons"><%= link_to "Sign out", sign_out_path, :method=>:delete %></button>
            <button class="top-buttons"><%= link_to "Become a host", new_listing_path %></button>
          <%else%>
-      <button class="top-buttons"><%= link_to "Reservation", reservations_path%></button>
-     <button class="top-buttons">Log in</button>
+    
+     <button class="top-buttons"><%= link_to "Log In", sign_in_path%></button>
      <button class="top-buttons" data-toggle="modal" data-target="#signup">Sign up</button>
      	<div class="modal fade" id="signup" role="dialog">
     		<div class="modal-dialog modal-lg">
@@ -14,13 +14,14 @@
         			<div class="modal-header">
                 <div class="col-md-4"></div>
                   <div class="col-md-4">
-          				  <button type="button" class="btn btn-default btn-lg"><%= link_to "Sign in with Facebook", "/auth/facebook" %></button>
+                  <button type="button" class="btn1 btn-lg">
+          				  <%= link_to "Sign in with Facebook", "/auth/facebook", class: "facebook-button" %></button>
           			       </div></div>
-                 		   <div class="modal-body">
+                 		   <div >
                           <div class="col-md-4"></div>
                               <div class="col-md-4">
           					                <div class="signup"
-                                    <h3> Create your account here</h3>
+                                    <h4> Create your account here</h4>
                                     <%= form_for :user, url: users_path do |form| %>
                                     <%= form.label :email %>
                                     <%= form.text_field :email, type: 'email' %>
@@ -36,8 +37,7 @@
       			               </div>
     		              </div>
   		            </div>
-                             <button class="top-buttons">Help</button>
-           <button class="top-buttons">Become a host</button>
+
          <% end %>
 <div class = "container">
      <div class="trips">Unforgettable trips start with Airbnb.</div>
@@ -55,9 +55,9 @@
     <div class="guest col-md-4">&nbsp;&nbsp;When<br>
     <div class="row">
             <input class="phmargin" type="text"
-            maxlength="50" size="15" placeholder="&nbsp;&nbsp;Check in">
+            maxlength="50" size="13" placeholder="&nbsp;&nbsp;Check in">
             <input type="text" name="location"
-            maxlength="50" size="15" placeholder="-> Check out">
+            maxlength="50" size="12" placeholder="-> Check out">
     </div>
     </div>
 
@@ -75,9 +75,9 @@
     <% @listings.each do |listing| %>
     <div class = room-card>
       <div  class="roompic col-md-4">
-        <%= listing.id %>
+        <% listing.id %>
         <%=image_tag(listing.avatar.medium.url) if listing.avatar?%>
-          <span class="pricebold">RM <%=listing.price_night%>  <%=listing.property_type%> in <%=listing.country%><%=listing.state%> </span><br>
+          <span class="pricebold"><br>RM <%=listing.price_night%>  <%=listing.property_type%> in <%=listing.country%><%=listing.state%> </span><br>
           <%=listing.bedroom_quantity%>bedroom · <%=listing.bed_quantity%> bed</span>
           </div>
     </div>
